@@ -1,0 +1,46 @@
+.item{
+   border: 1px solid black; 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; 
+  width: 45%;
+  height: 300rpx;
+  border-radius:5%;
+  position: relative;
+  margin: 15rpx;
+  /* background-color: #00FFFF; */
+}
+.cartoon-image{
+  width: 100%;
+  height: 76%;
+  border-radius:5% 5% 0% 0%; 
+}
+
+.cartoon-name{
+   /* border: 1px solid black;  */
+  width: 100%;
+  height: 12%;
+  font-size: 11pt;
+}
+.cartoon-play-company{
+   /* border: 1px solid green;  */
+  width: 100%;
+  height: 12%;
+  font-size: 8pt;
+  position: relative;
+  left:270rpx;
+}
+.time{
+  color: white;
+  font-size: 11pt;
+  position: absolute;
+  left: 5rpx;
+  top:64%;
+}
+.episodes{
+  color: white;
+  font-size: 11pt;
+  position: absolute;
+  right: 10rpx;
+  top:64%;
+}

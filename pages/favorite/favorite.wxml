@@ -1,0 +1,287 @@
+<view class="container">
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+    <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+
+  <view class="item">
+    <image src='../../images/1.jpg' class='cartoon-image'>
+      <view class='time-episodes'>
+        <text class='time'>10:30</text>
+        <text class='episodes'>第3集</text>
+      </view>
+    </image>
+    <view class='content'>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-play-company'>Bilibili</view>
+    </view>
+  </view>
+</view>
