@@ -1,0 +1,80 @@
+.card {
+   /* border: 1px solid black;  */
+  width: 94%;
+  height: 300rpx;
+  margin: 0rpx auto 30rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card-cartoon {
+   border: 1px solid black; 
+  width: 45%;
+  height: 300rpx;
+}
+
+.card-cartoon-img {
+  /* border: 1px solid red; */
+  width:100%;
+  height: 60%;
+  /* margin-top: 60rpx; */
+}
+
+.card-time-right {
+  /* border: 1px solid red; */
+  width: 45%;
+  height: 300rpx;
+  line-height: 300rpx;
+}
+
+.card-time-left {
+  /* border: 1px solid red; */
+  width: 45%;
+  height: 300rpx;
+  line-height: 300rpx;
+  text-align: right;
+}
+
+.col-line {
+  height: 3500rpx;
+  width: 5rpx;
+  background: green;
+  position: absolute;
+  left: 50%;
+}
+
+ .row-line-left {
+  height: 5rpx;
+  width: 35rpx;
+  background: green;
+  position: absolute;
+  top:150rpx;
+  right:50%;
+
+} 
+
+ .row-line-right {
+  height: 5rpx;
+  width: 35rpx;
+  background: green;
+  position: absolute;
+  top:150rpx;
+  left:50%;
+
+} 
+
+.cartoon-name{
+  height: 60rpx;
+  width: 100%;
+  font-size:30rpx; 
+  line-height:60rpx;
+}
+.cartoon-episodes{
+  height: 60rpx;
+  width: 100%;
+  font-size:30rpx;
+  line-height:60rpx; 
+}  

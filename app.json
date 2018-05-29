@@ -1,11 +1,11 @@
 {
-  "pages":[
-    "pages/favorite/favorite",
+  "pages": [
     "pages/cartoon/cartoon",
+    "pages/favorite/favorite",
     "pages/home/home"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"

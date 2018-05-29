@@ -1,0 +1,18 @@
+<view>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">一</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">二</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">三</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">四</view>
+    <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">五</view>
+    <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">六</view>
+    <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">七</view>
+    <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">六</view>
+    <view class="tab-item {{currentTab==8?'active':''}}" data-current="8" bindtap="swichNav">五</view>
+    <view class="tab-item {{currentTab==9?'active':''}}" data-current="9" bindtap="swichNav">四</view>
+    <view class="tab-item {{currentTab==10?'active':''}}" data-current="10" bindtap="swichNav">三</view>
+    <view class="tab-item {{currentTab==11?'active':''}}" data-current="11" bindtap="swichNav">二</view>
+    <view class="tab-item {{currentTab==12?'active':''}}" data-current="12" bindtap="swichNav">一</view>
+  </scroll-view>
+
+</view>
