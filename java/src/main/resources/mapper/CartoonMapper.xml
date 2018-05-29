@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gsdyx.otakuhappy.mapper.CartoonMapper" >
+  <resultMap id="BaseResultMap" type="com.gsdyx.otakuhappy.pojo.Cartoon" >
+    <id column="cartoonId" property="cartoonid" jdbcType="INTEGER" />
+    <result column="cartoonName" property="cartoonname" jdbcType="VARCHAR" />
+    <result column="episodes" property="episodes" jdbcType="VARCHAR" />
+    <result column="episodesAll" property="episodesall" jdbcType="VARCHAR" />
+    <result column="weekPlay" property="weekplay" jdbcType="VARCHAR" />
+    <result column="timePlay" property="timeplay" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    cartoonId, cartoonName, episodes, episodesAll, weekPlay, timePlay
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gsdyx.otakuhappy.pojo.CartoonExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from cartoon
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from cartoon
+    where cartoonId = #{cartoonid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from cartoon
+    where cartoonId = #{cartoonid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gsdyx.otakuhappy.pojo.CartoonExample" >
+    delete from cartoon
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gsdyx.otakuhappy.pojo.Cartoon" >
+    insert into cartoon (cartoonId, cartoonName, episodes, 
+      episodesAll, weekPlay, timePlay
+      )
+    values (#{cartoonid,jdbcType=INTEGER}, #{cartoonname,jdbcType=VARCHAR}, #{episodes,jdbcType=VARCHAR}, 
+      #{episodesall,jdbcType=VARCHAR}, #{weekplay,jdbcType=VARCHAR}, #{timeplay,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gsdyx.otakuhappy.pojo.Cartoon" >
+    insert into cartoon
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cartoonid != null" >
+        cartoonId,
+      </if>
+      <if test="cartoonname != null" >
+        cartoonName,
+      </if>
+      <if test="episodes != null" >
+        episodes,
+      </if>
+      <if test="episodesall != null" >
+        episodesAll,
+      </if>
+      <if test="weekplay != null" >
+        weekPlay,
+      </if>
+      <if test="timeplay != null" >
+        timePlay,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cartoonid != null" >
+        #{cartoonid,jdbcType=INTEGER},
+      </if>
+      <if test="cartoonname != null" >
+        #{cartoonname,jdbcType=VARCHAR},
+      </if>
+      <if test="episodes != null" >
+        #{episodes,jdbcType=VARCHAR},
+      </if>
+      <if test="episodesall != null" >
+        #{episodesall,jdbcType=VARCHAR},
+      </if>
+      <if test="weekplay != null" >
+        #{weekplay,jdbcType=VARCHAR},
+      </if>
+      <if test="timeplay != null" >
+        #{timeplay,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gsdyx.otakuhappy.pojo.CartoonExample" resultType="java.lang.Integer" >
+    select count(*) from cartoon
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update cartoon
+    <set >
+      <if test="record.cartoonid != null" >
+        cartoonId = #{record.cartoonid,jdbcType=INTEGER},
+      </if>
+      <if test="record.cartoonname != null" >
+        cartoonName = #{record.cartoonname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.episodes != null" >
+        episodes = #{record.episodes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.episodesall != null" >
+        episodesAll = #{record.episodesall,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weekplay != null" >
+        weekPlay = #{record.weekplay,jdbcType=VARCHAR},
+      </if>
+      <if test="record.timeplay != null" >
+        timePlay = #{record.timeplay,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update cartoon
+    set cartoonId = #{record.cartoonid,jdbcType=INTEGER},
+      cartoonName = #{record.cartoonname,jdbcType=VARCHAR},
+      episodes = #{record.episodes,jdbcType=VARCHAR},
+      episodesAll = #{record.episodesall,jdbcType=VARCHAR},
+      weekPlay = #{record.weekplay,jdbcType=VARCHAR},
+      timePlay = #{record.timeplay,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gsdyx.otakuhappy.pojo.Cartoon" >
+    update cartoon
+    <set >
+      <if test="cartoonname != null" >
+        cartoonName = #{cartoonname,jdbcType=VARCHAR},
+      </if>
+      <if test="episodes != null" >
+        episodes = #{episodes,jdbcType=VARCHAR},
+      </if>
+      <if test="episodesall != null" >
+        episodesAll = #{episodesall,jdbcType=VARCHAR},
+      </if>
+      <if test="weekplay != null" >
+        weekPlay = #{weekplay,jdbcType=VARCHAR},
+      </if>
+      <if test="timeplay != null" >
+        timePlay = #{timeplay,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where cartoonId = #{cartoonid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gsdyx.otakuhappy.pojo.Cartoon" >
+    update cartoon
+    set cartoonName = #{cartoonname,jdbcType=VARCHAR},
+      episodes = #{episodes,jdbcType=VARCHAR},
+      episodesAll = #{episodesall,jdbcType=VARCHAR},
+      weekPlay = #{weekplay,jdbcType=VARCHAR},
+      timePlay = #{timeplay,jdbcType=VARCHAR}
+    where cartoonId = #{cartoonid,jdbcType=INTEGER}
+  </update>
+</mapper>
