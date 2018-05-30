@@ -12,9 +12,33 @@ var animation = wx.createAnimation({
 
 Page({
 
-    data: {
-    n: 1,
-    animationData: {}
+  data: {
+    list : [
+      {
+        animationData: "",
+       cur:0
+      },
+      {
+        animationData: "",
+        cur: 1
+      
+      },
+      {
+        animationData: "",
+        cur: 2
+
+      },
+      {
+        animationData: "",
+        cur: 3
+
+      },
+      {
+        animationData: "",
+        cur: 4
+
+      }]
+    // animationData: {}
   },
   onLoad: function () {
    
@@ -38,17 +62,19 @@ Page({
     if (touchMove - touchDot <= -40 && time < 10 && flag_hd == true) {
       flag_hd = false;
       //执行切换页面的方法
-      console.log("向右滑动");
-
+      console.log("向左滑动");
+      var cur = e.currentTarget.dataset.current
   
 
     this.animation = animation;
 
-    animation.rotateY(180).step();
+    animation.rotateY(0).step();
 
+    var list = this.data.list;
+    list[cur].animationData= animation.export()
     this.setData({
-
-      animationData: animation.export()
+    list:list
+      
 
     })
 
@@ -57,16 +83,18 @@ Page({
     if (touchMove - touchDot >= 40 && time < 10 && flag_hd == true) {
       flag_hd = false;
       //执行切换页面的方法
-      console.log("向左滑动");
+      console.log("向右滑动");
 
-
+      var cur = e.currentTarget.dataset.current
+      console.log(cur)
       this.animation = animation;
 
-      animation.rotateY(-180).step();
-
+      animation.rotateY(180).step();
+      var list = this.data.list;
+      list[cur].animationData = animation.export()
       this.setData({
+        list: list
 
-        animationData: animation.export()
 
       })
     }

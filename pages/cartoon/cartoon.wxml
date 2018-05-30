@@ -1,120 +1,29 @@
 <!-- <view animation="{{animationData}}" style="background:red;height:250rpx;width:600rpx;margin: 300rpx auto;" bindtouchstart="touchStart" bindtouchend="touchEnd">hello</view>  -->
 <text>左边关注时间线，右边全部时间线，左滑添加进关注时间线，反之。</text>
- <view class='col-line'></view>
+<view class='col-line'></view>
 
-<view class='card'>
-  <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
-  <view class='row-line-left'></view>
-  <view class='card-time-right'>10:34</view>
-</view>
-
-
-<view class='card'>
-<view class='card-time-left'>10:34</view>
-  <view class='row-line-right'></view>
+<view wx:for="{{list}}">
+    <view class='card' data-current="{{item.cur}}" animation="{{item.animationData}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
     <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
+      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <image class='card-cartoon-img' src='../../images/1.jpg'></image>
+      <view class='cartoon-episodes'>更新至第8话</view>
+    </view>
+    <view class='row-line-left'></view>
+    <view class='card-time-right'>10:34</view>
   </view>
 </view>
 
-<view class='card'>
-  <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
- 
-  <view class='row-line-left'></view>
-  <view class='card-time-right'>10:34</view>
-</view>
-<view class='card'>
-  <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
- 
-  <view class='row-line-left'></view>
-  <view class='card-time-right'>10:34</view>
-</view>
 
-<view class='card'>
-<view class='card-time-left'>10:34</view>
+
+
+<!--   
+ <view class='card' data-current="1" animation="{{animationData}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class='card-time-left'>10:34</view>
   <view class='row-line-right'></view>
-    <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
-</view>
-
-
-<view class='card'>
   <view class='card-cartoon'>
     <view class='cartoon-name'>齐木楠雄的灾难</view>
     <image class='card-cartoon-img' src='../../images/1.jpg'></image>
     <view class='cartoon-episodes'>更新至第8话</view>
   </view>
- 
-  <view class='row-line-left'></view>
-  <view class='card-time-right'>10:34</view>
-</view>
-<view class='card'>
-  <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
- 
-  <view class='row-line-left'></view>
-  <view class='card-time-right'>10:34</view>
-</view>
-
-<view class='card'>
-<view class='card-time-left'>10:34</view>
-  <view class='row-line-right'></view>
-    <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
-</view>
-
-
-<view class='card'>
-  <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
- 
-  <view class='row-line-left'></view>
-  <view class='card-time-right'>10:34</view>
-</view>
-<view class='card'>
-  <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
- 
-  <view class='row-line-left'></view>
-  <view class='card-time-right'>10:34</view>
-</view>
-
-<view class='card'>
-<view class='card-time-left'>10:34</view>
-  <view class='row-line-right'></view>
-    <view class='card-cartoon'>
-    <view class='cartoon-name'>齐木楠雄的灾难</view>
-    <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-    <view class='cartoon-episodes'>更新至第8话</view>
-  </view>
-</view>
-
+</view>    -->
