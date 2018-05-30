@@ -15,7 +15,7 @@ public class CartoonController {
 
     @ResponseBody
     @RequestMapping("/cartoon")
-    public List getCartoonDetails() {
-        return cartoonService.getCartoonDetails();
+    public List getCartoonDetails(String weeks) {
+        return cartoonService.getCartoonDetails(weeks);
     }
 }

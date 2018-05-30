@@ -1,4 +1,4 @@
-.tab-h {
+/* .tab-h {
   height: 80rpx;
   width: 100%;
   box-sizing: border-box;
@@ -33,4 +33,4 @@
   bottom: 0;
   left: 5rpx;
   border-radius: 16rpx;
-}
+} */

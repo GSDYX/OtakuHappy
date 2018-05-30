@@ -1,4 +1,4 @@
-<view class="container">
+<!-- <view class="container">
   <view class="item" bindtap='rotate3d'>
     <image src='../../images/1.jpg' class='cartoon-image'>
       <view class='time-episodes'>
@@ -13,4 +13,4 @@
   </view>
 
   
-</view>
+</view> -->

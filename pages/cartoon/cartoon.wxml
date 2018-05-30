@@ -1,17 +1,44 @@
-<!-- <view animation="{{animationData}}" style="background:red;height:250rpx;width:600rpx;margin: 300rpx auto;" bindtouchstart="touchStart" bindtouchend="touchEnd">hello</view>  -->
-<text>左边关注时间线，右边全部时间线，左滑添加进关注时间线，反之。</text>
+<!-- 顶端bar -->
+
+<view class='top-bar'>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" data-weeks="1" bindtap="swichNav">一</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" data-weeks="2" bindtap="swichNav">二</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" data-weeks="3" bindtap="swichNav">三</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" data-weeks="4" bindtap="swichNav">四</view>
+    <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" data-weeks="5" bindtap="swichNav">五</view>
+    <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" data-weeks="6" bindtap="swichNav">六</view>
+    <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" data-weeks="7" bindtap="swichNav">七</view>
+    <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" data-weeks="6" bindtap="swichNav">六</view>
+    <view class="tab-item {{currentTab==8?'active':''}}" data-current="8" data-weeks="5" bindtap="swichNav">五</view>
+    <view class="tab-item {{currentTab==9?'active':''}}" data-current="9" data-weeks="4" bindtap="swichNav">四</view>
+    <view class="tab-item {{currentTab==10?'active':''}}" data-current="10" data-weeks="3" bindtap="swichNav">三</view>
+    <view class="tab-item {{currentTab==11?'active':''}}" data-current="11" data-weeks="2" bindtap="swichNav">二</view>
+    <view class="tab-item {{currentTab==12?'active':''}}" data-current="12" data-weeks="1" bindtap="swichNav">一</view>
+  </scroll-view>
+</view>
+
+
+
+<!-- 竖线 -->
 <view class='col-line'></view>
 
-<view wx:for="{{list}}">
-    <view class='card' data-current="{{item.cur}}" animation="{{item.animationData}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+<!-- 循环显示动画卡 -->
+<view wx:for="{{cartoonList}}">
+  <view class='card' data-current="{{item.cur}}" animation="{{item.animationData}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
     <view class='card-cartoon'>
-      <view class='cartoon-name'>齐木楠雄的灾难</view>
+      <view class='cartoon-name' style='transform: rotateY(0deg)'>
+        {{item.cartoonname}}
+      </view>
       <image class='card-cartoon-img' src='../../images/1.jpg'></image>
-      <view class='cartoon-episodes'>更新至第8话</view>
+      <view class='cartoon-episodes' style='transform: rotateY(0deg)'>
+        更新至第{{item.episodes}}话
+      </view>
     </view>
     <view class='row-line-left'></view>
-    <view class='card-time-right'>10:34</view>
+    <view class='card-time-right' style='transform: rotateY(0deg)'>{{item.timeplay}}</view>
   </view>
+
 </view>
 
 

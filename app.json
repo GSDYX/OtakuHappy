@@ -13,12 +13,13 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/favorite/favorite",
-        "text": "首页"
-      },
-      {
         "pagePath": "pages/cartoon/cartoon",
         "text": "动画"
+       
+      },
+      {
+        "pagePath": "pages/favorite/favorite",
+        "text": "第二页"
       },
       {
         "pagePath": "pages/home/home",

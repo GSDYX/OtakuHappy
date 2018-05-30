@@ -1,4 +1,4 @@
-<view>
+<!-- <view>
   <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
     <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">一</view>
     <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">二</view>
@@ -15,4 +15,6 @@
     <view class="tab-item {{currentTab==12?'active':''}}" data-current="12" bindtap="swichNav">一</view>
   </scroll-view>
 
-</view>
+</view> -->
+
+<view><button catchtap='time'>点我</button></view>

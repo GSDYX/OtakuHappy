@@ -8,18 +8,22 @@ Page({
     }]
   },
  
-  // 点击标题切换当前页时改变样式
-  swichNav: function (e) {
-    var cur = e.target.dataset.current;
-    if (this.data.currentTab == cur) { return false; }
-    else {
-      this.setData({
-        currentTab: cur
-      })
-    }
-  } 
+  // // 点击标题切换当前页时改变样式
+  // swichNav: function (e) {
+  //   var cur = e.target.dataset.current;
+  //   if (this.data.currentTab == cur) { return false; }
+  //   else {
+  //     this.setData({
+  //       currentTab: cur
+  //     })
+  //   }
+  // } 
 
-
-
+  time:function time(){
+   
+    console.log(new Date().getDay())
+  }
+  
+  
   
 })

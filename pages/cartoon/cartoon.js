@@ -13,40 +13,77 @@ var animation = wx.createAnimation({
 Page({
 
   data: {
-    list : [
-      {
-        animationData: "",
-       cur:0
-      },
-      {
-        animationData: "",
-        cur: 1
+    currentTab: 0, //预设顶端bar当前项的值
+    cartoonList:[],
+    // list : [
+    //   {
+    //     animationData: "",
+    //    cur:0
+    //   },
+    //   {
+    //     animationData: "",
+    //     cur: 1
       
-      },
-      {
-        animationData: "",
-        cur: 2
+    //   },
+    //   {
+    //     animationData: "",
+    //     cur: 2
 
-      },
-      {
-        animationData: "",
-        cur: 3
+    //   },
+    //   {
+    //     animationData: "",
+    //     cur: 3
 
-      },
-      {
-        animationData: "",
-        cur: 4
+    //   },
+    //   {
+    //     animationData: "",
+    //     cur: 4
 
-      }]
+    //   }]
     // animationData: {}
   },
-  onLoad: function () {
-   
-  },
-  onShow: function () {
-  
+  // 点击顶端bar切换当前页时改变样式并请数据库获取数据
+  swichNav: function (e) {
+    // 改变样式
+    var cur = e.target.dataset.current;
+    if (this.data.currentTab == cur) { return false; }
+    else {
+      this.setData({
+        currentTab: cur
+      })
+    }
+    //获取当前选择星期 
+    var weeks = e.target.dataset.weeks;
+    console.log(weeks)
+    // var weeks=new Date().getDay()
+    var _this = this;
+    wx.request({
+      url: 'http://localhost:8080/cartoon',
+      data: {
+        weeks: weeks
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+// 获取单日动画数
+        var cartoonNum=res.data.length;
+        // 重新构造list用来渲染卡片翻转
+        for (var i = 0; i < cartoonNum; i++) {
+          res.data[i]['cur'] = i;
+          res.data[i]['animationData']='';
+        }
+        
     
-  },
+        _this.setData({
+          cartoonList:res.data
+        })
+   
+        console.log(res.data)
+      }
+    })
+  } ,
+
   // 触摸开始事件
   touchStart: function (e) {
     touchDot = e.touches[0].pageX; // 获取触摸时的原点
@@ -70,10 +107,10 @@ Page({
 
     animation.rotateY(0).step();
 
-    var list = this.data.list;
-    list[cur].animationData= animation.export()
+    var cartoonList = this.data.cartoonList;
+    cartoonList[cur].animationData= animation.export()
     this.setData({
-    list:list
+      cartoonList: cartoonList
       
 
     })
@@ -90,10 +127,10 @@ Page({
       this.animation = animation;
 
       animation.rotateY(180).step();
-      var list = this.data.list;
-      list[cur].animationData = animation.export()
+      var cartoonList = this.data.cartoonList;
+      cartoonList[cur].animationData = animation.export()
       this.setData({
-        list: list
+        cartoonList: cartoonList
 
 
       })
@@ -101,5 +138,9 @@ Page({
     clearInterval(interval); // 清除setInterval
     time = 0;
     flag_hd = true;  
+  },
+  onReady:function(){
+  
   }
+
 })
