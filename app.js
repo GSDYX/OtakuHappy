@@ -47,13 +47,16 @@ App({
       success: function (res) {
         if (res.code) {
           console.log(res.code)
-          //发起网络请求
+          // 发起网络请求
           wx.request({
             url: 'http://localhost:8080/loginCode',
             data: {
               code: res.code
               
             }, 
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
             success: function (res) {
               console.log(res.data)
 

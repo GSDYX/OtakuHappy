@@ -53,3 +53,42 @@ INSERT INTO `cartoon` VALUES (NULL , 'Fate/EXTRA Last Encore', '1',NULL ,'7','0:
 INSERT INTO `cartoon` VALUES (NULL , '女神异闻录5 动画版', '1',NULL ,'7','1:00');
 
 
+-- 用户表
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `userId` int(10) NOT NULL AUTO_INCREMENT,
+  `openid` varchar(64) DEFAULT NULL,
+  `firstLoginTime` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `user` VALUES (NULL , '1', NULL );
+INSERT INTO `user` VALUES (NULL , '2', NULL );
+INSERT INTO `user` VALUES (NULL , '3', NULL );
+INSERT INTO `user` VALUES (NULL , '4', NULL );
+
+
+-- 用户 动画表
+
+DROP TABLE IF EXISTS `user_cartoon`;
+CREATE TABLE `user_cartoon` (
+  `userCartoonId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userId` int(10) unsigned DEFAULT NULL,
+  `cartoonId` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`userCartoonId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `user_cartoon` VALUES (NULL , '1', '1' );
+INSERT INTO `user_cartoon` VALUES (NULL , '1', '2' );
+INSERT INTO `user_cartoon` VALUES (NULL , '1', '4' );
+INSERT INTO `user_cartoon` VALUES (NULL , '1', '7' );
+INSERT INTO `user_cartoon` VALUES (NULL , '2', '1' );
+INSERT INTO `user_cartoon` VALUES (NULL , '2', '3' );
+INSERT INTO `user_cartoon` VALUES (NULL , '2', '4' );
+INSERT INTO `user_cartoon` VALUES (NULL , '2', '10');
+INSERT INTO `user_cartoon` VALUES (NULL , '2', '12');
+INSERT INTO `user_cartoon` VALUES (NULL , '3', '2' );
+INSERT INTO `user_cartoon` VALUES (NULL , '3', '4' );
+INSERT INTO `user_cartoon` VALUES (NULL , '3', '5' );
+INSERT INTO `user_cartoon` VALUES (NULL , '3', '6' );
+INSERT INTO `user_cartoon` VALUES (NULL , '3', '8' );
