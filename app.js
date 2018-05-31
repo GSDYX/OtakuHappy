@@ -43,7 +43,28 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          console.log(res.code)
+          //发起网络请求
+          wx.request({
+            url: 'http://localhost:8080/loginCode',
+            data: {
+              code: res.code
+              
+            }, 
+            success: function (res) {
+              console.log(res.data)
+
+            }
+            
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    });
   },
 
   /**
